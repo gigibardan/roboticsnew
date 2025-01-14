@@ -11,24 +11,27 @@ const ModuleSection = ({ module }) => {
         <div className="bg-white rounded-lg shadow-lg p-6 md:p-8">
           {/* Header */}
           <div className="flex justify-between items-center mb-6">
-            <div>
-              <span className={`text-sm font-medium ${getLevelColor(module.level)}`}>
-                {module.level}
-              </span>
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mt-1">
-                {module.title}
-              </h2>
-              <h3 className="text-lg md:text-xl text-gray-600 mt-1">
-                {module.subtitle}
-              </h3>
-            </div>
-            <button
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors"
-            >
-              ↑ Sus
-            </button>
-          </div>
+  <div>
+    <span className={`text-sm font-medium ${getLevelColor(module.level)}`}>
+      {module.level}
+    </span>
+    <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mt-1">
+      {module.title}
+    </h2>
+    <h3 className="text-lg md:text-xl text-gray-600 mt-1">
+      {module.subtitle}
+    </h3>
+    <p className="text-gray-600 mt-4 whitespace-pre-line">
+      {module.description}
+    </p>
+  </div>
+  <button
+    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+    className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors"
+  >
+    ↑ Sus
+  </button>
+</div>
    
           {/* Kit Information */}
           <div className="space-y-6">
@@ -120,7 +123,7 @@ const ModuleSection = ({ module }) => {
             {/* Projects Section */}
             {module.projects && (
               <div className="mt-8">
-                <h3 className="text-2xl font-bold text-gray-800 mb-4">Proiecte</h3>
+                <h3 className="text-2xl font-bold text-gray-800 mb-4">Exemple de Proiecte practice</h3>
                 {['basic', 'intermediate', 'advanced'].map((level) => (
                   module.projects[level] && (
                     <div key={level} className="mb-6">
@@ -206,39 +209,41 @@ const ModuleSection = ({ module }) => {
               </div>
             )}
    
-            {/* Curriculum Section */}
-            {module.curriculum && (
-              <div className="mt-8 bg-blue-50 rounded-lg p-6">
-                <h3 className="text-2xl font-bold text-gray-800 mb-4">Structură Curriculum</h3>
-                
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <h4 className="font-semibold text-lg mb-2">Detalii Organizatorice</h4>
-                    <ul className="space-y-2">
-                      {Object.entries(module.curriculum.structure).map(([key, value]) => (
-                        <li key={key} className="flex items-start">
-                          <span className="text-blue-500 mr-2">•</span>
-                          <span className="text-gray-700">{value}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-   
-                  <div>
-                    {Object.entries(module.curriculum.progression).map(([phase, data]) => (
-                      <div key={phase} className="mb-4">
-                        <h5 className="font-semibold text-gray-800 mb-2">{data.title}</h5>
-                        <ul className="list-disc pl-5">
-                          {data.content.map((item, i) => (
-                            <li key={i} className="text-gray-600">{item}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            )}
+          {/* Curriculum Section */}
+{module.curriculum && (
+  <div className="mt-8 bg-blue-50 rounded-lg p-6">
+    <h3 className="text-2xl font-bold text-gray-800 mb-4">Structură Curriculum</h3>
+    
+    <div className="grid md:grid-cols-2 gap-6">
+      {module.curriculum.structure && (
+        <div>
+          <h4 className="font-semibold text-lg mb-2">Detalii Organizatorice</h4>
+          <ul className="space-y-2">
+            {Object.entries(module.curriculum.structure).map(([key, value]) => (
+              <li key={key} className="flex items-start">
+                <span className="text-blue-500 mr-2">•</span>
+                <span className="text-gray-700">{value}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      <div>
+        {Object.entries(module.curriculum.progression).map(([phase, data]) => (
+          <div key={phase} className="mb-4">
+            <h5 className="font-semibold text-gray-800 mb-2">{data.title}</h5>
+            <ul className="list-disc pl-5">
+              {data.content.map((item, i) => (
+                <li key={i} className="text-gray-600">{item}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+)}
    
             {/* Evaluation Section */}
             {module.evaluation && (

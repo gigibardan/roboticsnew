@@ -1,925 +1,1269 @@
 export const modules = [
-    {
-      id: 'level1-lego',
+  {
+      id: 'spike-essential',
       level: 'Nivel 1 - Începător',
-      title: 'LEGO Education SPIKE Essential & WeDo 2.0',
-      subtitle: 'Introducere în Robotică (7-9 ani)',
-      description: 'Primul pas în lumea roboticii folosind LEGO Education - o abordare prietenoasă și intuitivă',
-      
-      kitInfo: {
-        title: 'Informații Kit-uri',
-        options: [
-          {
-            name: 'LEGO Education SPIKE Essential',
-            price: '~350-400€',
-            contains: [
-              'Hub programabil cu LED-uri și Bluetooth',
-              '449 piese LEGO pentru construcție',
-              'Motor mediu',
-              'Senzor de culoare',
-              'Senzor de distanță',
-              'LED-uri și matrice LED colorată',
-              'Cablu de conectare',
-              'Cutie de sortare cu tavă'
-            ],
-            advantages: [
-              'Calitate LEGO garantată',
-              'Software foarte intuitiv',
-              'Suport educațional excelent',
-              'Materiale curriculare incluse',
-              'Durabilitate ridicată'
-            ],
-            disadvantages: [
-              'Cost mai ridicat',
-              'Limitat la ecosistemul LEGO',
-              'Mai puține posibilități de extindere'
-            ]
-          },
-          {
-            name: 'LEGO WeDo 2.0',
-            price: '~200-250€',
-            contains: [
-              'Hub Bluetooth Smart',
-              'Motor mediu',
-              'Senzor de mișcare',
-              'Senzor de înclinare',
-              '280+ piese LEGO',
-              'Cutie de sortare'
-            ],
-            advantages: [
-              'Mai accesibil ca preț',
-              'Perfect pentru începători',
-              'Ușor de utilizat',
-              'Software simplu'
-            ],
-            disadvantages: [
-              'Mai puține componente',
-              'Limitări în complexitatea proiectelor',
-              'Un singur motor'
-            ]
-          }
-        ],
-        recommendedSetup: {
-          small: {
-            title: 'Setup Recomandat pentru Grupă Mică (8-12 copii)',
-            items: [
-              '4x SPIKE Essential SAU 6x WeDo 2.0',
-              '4-6 tablete/laptopuri pentru programare',
-              'Spațiu de lucru: minim 30mp',
-              'Mese mari pentru lucru în echipă',
-              'Dulap pentru depozitare'
-            ],
-            estimatedCost: 'SPIKE Essential: ~1600€ | WeDo 2.0: ~1400€'
-          },
-          large: {
-            title: 'Setup Recomandat pentru Grupă Mare (12-16 copii)',
-            items: [
-              '6x SPIKE Essential SAU 8x WeDo 2.0',
-              '6-8 tablete/laptopuri pentru programare',
-              'Spațiu de lucru: minim 40mp',
-              'Mese configurabile pentru lucru în echipă',
-              'Sistem de proiecție',
-              'Dulap pentru depozitare'
-            ],
-            estimatedCost: 'SPIKE Essential: ~2400€ | WeDo 2.0: ~1800€'
-          }
-        }
-      },
-  
+      title: 'LEGO Education SPIKE Essential',
+      subtitle: 'Introducere în Robotică (7-11 ani)',
+      description: 'LEGO Education SPIKE Essential reprezintă primul pas în lumea fascinantă a roboticii educaționale. Acest kit combină piesele familiare LEGO cu tehnologie modernă, permițând copiilor să învețe bazele roboticii și programării într-un mod intuitiv și antrenant.\n\n' +
+                  'Copiii vor explora:\n' +
+                  '• Construcția și designul robotic folosind motoare și senzori\n' +
+                  '• Programarea vizuală prin blocuri de cod intuitive\n' +
+                  '• Rezolvarea creativă a problemelor prin proiecte practice\n' +
+                  '• Dezvoltarea gândirii logice și computaționale\n' +
+                  '• Abilitățile de lucru în echipă și comunicare\n\n' +
+                  'Platforma este concepută special pentru începători, folosind un hub programabil, motoare precise și senzori versatili, împreună cu o interfață de programare vizuală adaptată vârstei.',
+
       projects: {
-        basic: {
-          title: 'Proiecte de Bază (Primele 4-6 săptămâni)',
-          list: [
-            {
-              name: 'Robot Dansator Interactiv',
-              description: 'Robot care dansează în funcție de muzică și lumini, introducând concepte de bază în programare și mișcare.',
-              difficulty: 'Începător',
-              duration: '2-3 ședințe',
-              concepts: ['Control motor', 'LED-uri', 'Secvențe', 'Sunete'],
-              detailedSteps: [
-                {
-                  phase: 'Construcție',
-                  steps: [
-                    'Asamblarea bazei mobile cu două motoare',
-                    'Adăugarea LED-urilor pentru efecte vizuale',
-                    'Montarea hub-ului în poziție stabilă',
-                    'Personalizarea aspectului robotului'
-                  ]
-                },
-                {
-                  phase: 'Programare',
-                  steps: [
-                    'Crearea secvențelor de mișcare de bază (înainte/înapoi, rotații)',
-                    'Programarea efectelor LED pentru diferite stări',
-                    'Adăugarea sunetelor și sincronizarea cu mișcările',
-                    'Implementarea buclelor pentru repetarea secvențelor'
-                  ]
-                }
-              ],
-              learningOutcomes: [
-                'Înțelegerea relației între comenzi și acțiuni',
-                'Noțiuni de secvențialitate în programare',
-                'Coordonarea mișcărilor cu efecte vizuale și audio',
-                'Bazele programării cu blocuri vizuale'
-              ],
-              extensions: [
-                'Adăugarea de mișcări complexe',
-                'Sincronizare cu muzică externă',
-                'Dans în oglindă cu alt robot',
-                'Efecte de lumini personalizate'
-              ]
-            },
-            {
-              name: 'Animăluțe Robotice Interactive',
-              description: 'Crearea unor animale robotice care reacționează la mediul înconjurător folosind senzori.',
-              difficulty: 'Începător',
-              duration: '2-3 ședințe',
-              concepts: ['Senzori', 'Reacții', 'Comportament', 'Interactivitate'],
-              detailedSteps: [
-                {
-                  phase: 'Construcție',
-                  steps: [
-                    'Alegerea și construirea scheletului de bază',
-                    'Montarea senzorului de mișcare',
-                    'Adăugarea elementelor mobile (cap, coadă)',
-                    'Personalizarea aspectului'
-                  ]
-                },
-                {
-                  phase: 'Programare',
-                  steps: [
-                    'Programarea reacțiilor de bază la detectarea mișcării',
-                    'Adăugarea de sunete specifice animalului',
-                    'Crearea pattern-urilor de mișcare naturale',
-                    'Implementarea stărilor de "somn" și "activ"'
-                  ]
-                }
-              ],
-              learningOutcomes: [
-                'Înțelegerea funcționării senzorilor',
-                'Logică condițională simplă',
-                'Programarea comportamentelor interactive',
-                'Creativitate în design'
-              ]
-            }
-          ]
-        },
-        intermediate: {
-          title: 'Proiecte Intermediare (Săptămânile 7-10)',
-          list: [
-            {
-              name: 'Vehicul Autonom de Explorare',
-              description: 'Robot mobil care poate naviga autonom și evita obstacole, colectând "date" din mediul înconjurător.',
-              difficulty: 'Intermediar',
-              duration: '3-4 ședințe',
-              concepts: ['Senzori multipli', 'Logică avansată', 'Navigare', 'Colectare date'],
-              detailedSteps: [
-                {
-                  phase: 'Construcție',
-                  steps: [
-                    'Asamblarea platformei mobile robuste',
-                    'Montarea senzorilor (distanță, culoare)',
-                    'Optimizarea poziției senzorilor',
-                    'Adăugarea unui sistem de marcare a traseului'
-                  ]
-                },
-                {
-                  phase: 'Programare',
-                  steps: [
-                    'Algoritm de evitare obstacole',
-                    'Urmărirea liniilor și marcajelor',
-                    'Implementarea diferitelor moduri de operare',
-                    'Sistem de logging al datelor colectate'
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        advanced: {
-          title: 'Proiecte Avansate (Săptămânile 11-14)',
-          list: [
-            {
-              name: 'Stație Meteo Robotică',
-              description: 'Un sistem automatizat care monitorizează și afișează diferite condiții folosind senzorii disponibili.',
-              difficulty: 'Avansat',
-              duration: '4 ședințe',
-              concepts: ['Multi-senzori', 'Display', 'Logging', 'Automatizare'],
-              detailedSteps: [
-                {
-                  phase: 'Construcție',
-                  steps: [
-                    'Construirea structurii de bază stabilă',
-                    'Montarea matricei LED pentru afișaj',
-                    'Poziționarea optimă a senzorilor',
-                    'Sistem de rotire pentru scanare'
-                  ]
-                },
-                {
-                  phase: 'Programare',
-                  steps: [
-                    'Citirea și procesarea datelor de la senzori',
-                    'Crearea interfeței de afișare',
-                    'Implementarea sistemului de alertă',
-                    'Programarea rutinelor de măsurare automată'
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      },
-  
-      curriculum: {
-        structure: {
-          duration: '14-16 săptămâni',
-          sessionsPerWeek: '1-2 sesiuni',
-          sessionLength: '1.5 ore',
-          groupSize: '8-12 copii',
-          teacherStudent: '1:6 ratio recomandat'
-        },
-        progression: {
-          initial: {
-            title: 'Faza Inițială (4 săptămâni)',
-            content: [
-              'Introducere în robotică și kituri',
-              'Construcție de bază',
-              'Programare vizuală simplă',
-              'Primele proiecte simple'
-            ]
-          },
-          development: {
-            title: 'Faza de Dezvoltare (6 săptămâni)',
-            content: [
-              'Proiecte intermediare',
-              'Lucru cu senzori',
-              'Programare mai complexă',
-              'Rezolvare probleme'
-            ]
-          },
-          advanced: {
-            title: 'Faza Avansată (4-6 săptămâni)',
-            content: [
-              'Proiecte complexe',
-              'Combinare concepte',
-              'Creativitate și inovație',
-              'Prezentări finale'
-            ]
-          }
-        }
-      },
-  
-      evaluation: {
-        methods: [
-          'Evaluare continuă prin observație',
-          'Portfolio de proiecte',
-          'Prezentări',
-          'Mini-competiții prietenoase'
-        ],
-        criteria: [
-          'Înțelegerea conceptelor',
-          'Capacitatea de rezolvare a problemelor',
-          'Creativitate în proiecte',
-          'Lucru în echipă'
-        ]
-      }
-    },
-
-    {
-        id: 'level1-mbot',
-        level: 'Nivel 1 - Începător',
-        title: 'mBot Explorer',
-        subtitle: 'Robotică Practică (8-12 ani)',
-        description: 'Introducere în robotică folosind platforma mBot - o abordare practică și accesibilă',
-        
-        kitInfo: {
-          options: [
-            {
-              name: 'mBot v1.1',
-              price: '~80-100€',
-              contains: [
-                'Placă mCore bazată pe Arduino',
-                '2 motoare DC',
-                'Senzor urmărire linie',
-                'Senzor ultrasonic',
-                'LED-uri RGB programabile',
-                'Buzzer pentru sunete',
-                'Telecomandă IR',
-                'Conexiune Bluetooth/2.4G',
-                'Carcasă și șasiu din aluminiu',
-                'Roți și componente de asamblare'
-              ],
-              advantages: [
-                'Cost accesibil',
-                'Bazat pe Arduino - tranziție ușoară spre programare avansată',
-                'Ușor de asamblat',
-                'Multiple senzori incluși',
-                'Comunitate mare de utilizatori',
-                'Posibilitate de extindere cu module adiționale'
-              ],
-              disadvantages: [
-                'Calitate materiale mai redusă față de LEGO',
-                'Documentație mai puțin detaliată',
-                'Suport educațional mai limitat',
-                'Poate necesita mici reparații ocazionale'
-              ]
-            },
-            {
-              name: 'mBot2',
-              price: '~130-150€',
-              contains: [
-                'Procesor dual-core ESP32',
-                'Gyroscop și accelerometru',
-                'Senzori de lumină și sunet',
-                '2 motoare cu encoder',
-                'Matrice LED 12x8',
-                'Senzor urmărire linie',
-                'Conexiune Wi-Fi',
-                'Baterie Li-Po reîncărcabilă',
-                'Structură metalică îmbunătățită'
-              ],
-              advantages: [
-                'Hardware mai performant',
-                'Mai mulți senzori integrați',
-                'Conectivitate Wi-Fi modernă',
-                'Baterie reîncărcabilă inclusă',
-                'Construcție mai robustă'
-              ],
-              disadvantages: [
-                'Preț mai ridicat',
-                'Complexitate mai mare pentru începători',
-                'Necesită actualizări firmware',
-                'Compatibilitate limitată cu versiunea anterioară'
-              ]
-            }
-          ],
-          recommendedSetup: {
-            small: {
-              title: 'Setup Recomandat pentru Grupă Mică (8-12 copii)',
-              items: [
-                '6x mBot (permite lucru în echipe de 2)',
-                '6 laptopuri/tablete pentru programare',
-                'Spațiu minim 25mp pentru activități',
-                'Masă mare pentru asamblare',
-                'Dulap pentru depozitare',
-                'Set baterii reîncărcabile + încărcător'
-              ],
-              estimatedCost: 'Cu mBot v1.1: ~600€ | Cu mBot2: ~900€'
-            },
-            large: {
-              title: 'Setup Recomandat pentru Grupă Mare (12-16 copii)',
-              items: [
-                '8x mBot',
-                '8 laptopuri/tablete',
-                'Spațiu minim 40mp',
-                'Multiple mese de lucru',
-                'Sistem proiecție',
-                'Dulapuri depozitare',
-                'Kit-uri rezervă componente'
-              ],
-              estimatedCost: 'Cu mBot v1.1: ~800€ | Cu mBot2: ~1200€'
-            }
-          }
-        },
-    
-        projects: {
-            basic: {
-              title: 'Proiecte de Bază (Primele 4-6 săptămâni)',
+          basic: {
+              title: 'Primii Pași în Robotică (Săptămânile 1-4)',
               list: [
-                {
-                  name: 'Primul Contact cu mBot',
-                  description: 'Introducere în controlul de bază al robotului și primele programe',
-                  difficulty: 'Începător',
-                  duration: '2 ședințe',
-                  concepts: ['Control de bază', 'LED-uri', 'Sunete', 'Mișcare simplă'],
-                  detailedSteps: [
-                    {
-                      phase: 'Asamblare',
-                      steps: [
-                        'Identificarea componentelor mBot',
-                        'Asamblarea șasiului și roților',
-                        'Montarea plăcii principale și senzorilor',
-                        'Conectarea motoarelor și verificare'
-                      ]
-                    },
-                    {
-                      phase: 'Programare Inițială',
-                      steps: [
-                        'Instalare și configurare mBlock',
-                        'Primul program - LED-uri și sunete',
-                        'Control motoare - mișcări de bază',
-                        'Testare și depanare'
-                      ]
-                    }
-                  ],
-                  learningOutcomes: [
-                    'Înțelegerea componentelor robotului',
-                    'Bazele programării vizuale',
-                    'Control LED-uri și motoare',
-                    'Depanare probleme simple'
-                  ]
-                },
-                {
-                  name: 'Robot Interactiv cu Telecomandă',
-                  description: 'Control la distanță al robotului folosind telecomanda IR',
-                  difficulty: 'Începător-Intermediar',
-                  duration: '2-3 ședințe',
-                  concepts: ['Control IR', 'Funcții', 'Variabile', 'Control motoare'],
-                  detailedSteps: [
-                    {
-                      phase: 'Programare',
-                      steps: [
-                        'Configurarea receptorului IR',
-                        'Programarea butoanelor de direcție',
-                        'Adăugarea controalelor pentru viteze',
-                        'Implementarea efectelor speciale (lumini, sunete)'
-                      ]
-                    },
-                    {
-                      phase: 'Testare și Optimizare',
-                      steps: [
-                        'Testarea comenzilor de bază',
-                        'Calibrarea vitezelor',
-                        'Adăugarea funcțiilor personalizate',
-                        'Optimizarea controlului'
-                      ]
-                    }
-                  ],
-                  learningOutcomes: [
-                    'Înțelegerea comunicării IR',
-                    'Programare evenimente',
-                    'Control precis al mișcării',
-                    'Logică de programare'
-                  ]
-                }
-              ]
-            },
-            intermediate: {
-              title: 'Proiecte Intermediare (Săptămânile 7-10)',
-              list: [
-                {
-                  name: 'Line Follower Avansat',
-                  description: 'Robot care urmărește linii cu diferite complexități și ia decizii',
-                  difficulty: 'Intermediar',
-                  duration: '3 ședințe',
-                  concepts: ['Senzor IR', 'Algoritmi', 'Control PID', 'Logică decizională'],
-                  detailedSteps: [
-                    {
-                      phase: 'Programare de Bază',
-                      steps: [
-                        'Înțelegerea senzorului de linie',
-                        'Implementare algoritm de bază',
-                        'Calibrare senzori',
-                        'Testare pe trasee simple'
-                      ]
-                    },
-                    {
-                      phase: 'Optimizare',
-                      steps: [
-                        'Implementare control PID',
-                        'Gestionare intersecții',
-                        'Optimizare viteză',
-                        'Testare pe trasee complexe'
-                      ]
-                    }
-                  ],
-                  learningOutcomes: [
-                    'Algoritmi de control',
-                    'Calibrare senzori',
-                    'Optimizare performanță',
-                    'Rezolvare probleme complexe'
-                  ]
-                },
-                {
-                  name: 'Sistem de Evitare Obstacole',
-                  description: 'Robot autonom care navighează și evită obstacole',
-                  difficulty: 'Intermediar',
-                  duration: '3 ședințe',
-                  concepts: ['Senzor ultrasonic', 'Algoritmi', 'Logică', 'Autonomie'],
-                  detailedSteps: [
-                    {
-                      phase: 'Programare',
-                      steps: [
-                        'Citire date senzor ultrasonic',
-                        'Implementare algoritm de evitare',
-                        'Adăugare comportamente complexe',
-                        'Optimizare decizii'
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            advanced: {
-              title: 'Proiecte Avansate (Săptămânile 11-14)',
-              list: [
-                {
-                  name: 'Robot Multi-Funcțional',
-                  description: 'Robot cu multiple moduri de operare și funcții complexe',
-                  difficulty: 'Avansat',
-                  duration: '4 ședințe',
-                  concepts: ['Moduri multiple', 'Integrare senzori', 'Algoritmi complecși', 'State machine'],
-                  detailedSteps: [
-                    {
-                      phase: 'Dezvoltare',
-                      steps: [
-                        'Implementare sistem de moduri',
-                        'Integrare toate tipurile de senzori',
-                        'Creare interfață utilizator',
-                        'Optimizare și testare'
-                      ]
-                    }
-                  ],
-                  learningOutcomes: [
-                    'Programare avansată',
-                    'Gestionare complexitate',
-                    'Integrare sisteme',
-                    'Debug și optimizare'
-                  ]
-                },
-                {
-                  name: 'Sistem de Securitate Mobil',
-                  description: 'Robot de patrulare cu detecție și alertare',
-                  difficulty: 'Avansat',
-                  duration: '3-4 ședințe',
-                  concepts: ['Senzori multipli', 'Comunicație', 'Alertare', 'Autonomie'],
-                  detailedSteps: [
-                    {
-                      phase: 'Implementare',
-                      steps: [
-                        'Sistem de patrulare autonom',
-                        'Detecție și clasificare evenimente',
-                        'Sistem de alertare',
-                        'Logging și monitorizare'
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          },
-          curriculum: {
-            structure: {
-              duration: '14-16 săptămâni',
-              sessionsPerWeek: '1-2 sesiuni',
-              sessionLength: '1.5 ore',
-              groupSize: '8-12 copii',
-              teacherStudent: '1:6 ratio recomandat'
-            },
-            progression: {
-              initial: {
-                title: 'Faza Inițială (4 săptămâni)',
-                content: [
-                  'Introducere în robotică și platforma mBot',
-                  'Asamblare și configurare inițială',
-                  'Programare vizuală de bază în mBlock',
-                  'Control de bază al robotului'
-                ]
-              },
-              development: {
-                title: 'Faza de Dezvoltare (6 săptămâni)',
-                content: [
-                  'Lucrul cu senzorii mBot',
-                  'Programare intermediară',
-                  'Proiecte de complexitate medie',
-                  'Introducere în concepte Arduino'
-                ]
-              },
-              advanced: {
-                title: 'Faza Avansată (4-6 săptămâni)',
-                content: [
-                  'Proiecte complexe multi-senzor',
-                  'Programare avansată',
-                  'Introducere în code view (Arduino)',
-                  'Personalizare și extindere proiecte'
-                ]
-              }
-            }
-          },
-      
-          evaluation: {
-            methods: [
-              'Evaluare continuă prin observație',
-              'Proiecte practice individuale și în echipă',
-              'Mini-hackathoane și provocări',
-              'Prezentări demonstrative',
-              'Portfolio digital cu proiecte'
-            ],
-            criteria: [
-              'Înțelegerea și aplicarea conceptelor de robotică',
-              'Capacitatea de rezolvare a problemelor tehnice',
-              'Gândire algoritmică și logică',
-              'Creativitate în dezvoltarea soluțiilor',
-              'Documentarea și prezentarea proiectelor',
-              'Lucru în echipă și comunicare'
-            ]
-          }
-        }, // Închiderea modulului mBot
-
-        {
-            id: 'level2-advanced',
-            level: 'Nivel 2 - Avansat',
-            title: 'LEGO MINDSTORMS EV3 & SPIKE Prime',
-            subtitle: 'Robotică Avansată (10-14 ani)',
-            description: 'Platforme avansate pentru dezvoltarea de roboți complecși și învățarea programării',
-        
-            kitInfo: {
-              options: [
-                {
-                  name: 'LEGO MINDSTORMS EV3 Education',
-                  price: '~400-450€',
-                  contains: [
-                    'Brick programabil EV3 cu procesor ARM9',
-                    '2x Motoare Mari',
-                    '1x Motor Mediu',
-                    'Senzor Giroscop',
-                    'Senzor Ultrasonic',
-                    'Senzor de Culoare',
-                    '2x Senzori de Atingere',
-                    '~540 piese LEGO Technic',
-                    'Cutie de sortare cu tavă',
-                    'Cabluri de conectare'
-                  ],
-                  advantages: [
-                    'Foarte versatil și robust',
-                    'Multiple limbaje de programare disponibile',
-                    'Comunitate mare și resurse abundente',
-                    'Perfect pentru competiții (FLL)',
-                    'Compatibil cu piese LEGO Technic',
-                    'Documentație extensivă'
-                  ],
-                  disadvantages: [
-                    'Cel mai scump dintre toate opțiunile',
-                    'Tehnologie mai veche (32-bit)',
-                    'Conectivitate limitată (Bluetooth vechi)',
-                    'Software poate fi încet pe PC-uri mai vechi'
-                  ]
-                },
-                {
-                  name: 'LEGO SPIKE Prime',
-                  price: '~350-400€',
-                  contains: [
-                    'Hub programabil cu 6 porturi',
-                    '2x Motoare Mari',
-                    '1x Motor Mediu',
-                    'Senzor de Culoare',
-                    'Senzor de Distanță',
-                    'Senzor de Forță',
-                    '528 piese LEGO',
-                    'Cutie de sortare',
-                    'Hub reîncărcabil cu Bluetooth'
-                  ],
-                  advantages: [
-                    'Hardware mai modern',
-                    'Conectivitate mai bună',
-                    'Interfață de programare modernă',
-                    'Mai ușor de utilizat inițial',
-                    'Baterie reîncărcabilă inclusă',
-                    'Design mai prietenos'
-                  ],
-                  disadvantages: [
-                    'Mai puține resurse disponibile',
-                    'Mai puțin folosit în competiții',
-                    'Mai puțin versatil pentru proiecte avansate',
-                    'Preț ridicat'
-                  ]
-                }
-              ],
-              recommendedSetup: {
-                small: {
-                  title: 'Setup Recomandat pentru Grupă Mică (8-12 copii)',
-                  items: [
-                    '4x EV3/SPIKE Prime (lucru în echipe de 2-3)',
-                    '4-6 laptopuri pentru programare',
-                    'Spațiu minim 40mp pentru testare',
-                    'Mese mari pentru construcție',
-                    'Zone dedicate pentru testare',
-                    'Dulap securizat pentru depozitare'
-                  ],
-                  estimatedCost: 'Cu EV3: ~1800€ | Cu SPIKE Prime: ~1600€'
-                },
-                large: {
-                  title: 'Setup Recomandat pentru Grupă Mare (12-16 copii)',
-                  items: [
-                    '6x EV3/SPIKE Prime',
-                    '6-8 laptopuri',
-                    'Spațiu minim 60mp',
-                    'Mese configurabile pentru echipe',
-                    'Zonă competiții/demonstrații',
-                    'Sistem proiecție',
-                    'Dulapuri pentru proiecte în lucru'
-                  ],
-                  estimatedCost: 'Cu EV3: ~2700€ | Cu SPIKE Prime: ~2400€'
-                }
-              }
-            },
-        
-            projects: {
-                basic: {
-                  title: 'Proiecte de Bază Nivel 2 (Primele 4-6 săptămâni)',
-                  list: [
-                    {
-                      name: 'Vehicul Autonom Inteligent',
-                      description: 'Robot mobil cu multiple moduri de navigare și evitare avansată a obstacolelor',
-                      difficulty: 'Intermediar',
-                      duration: '3-4 ședințe',
-                      concepts: ['Giroscop', 'PID Control', 'Fuziune senzori', 'State machine'],
+                  {
+                      name: 'Prietenul Robot',
+                      description: 'Un proiect introductiv în care copiii construiesc un robot interactiv care poate răspunde la prezența persoanelor și a obiectelor din jur, folosind senzorul de distanță și LED-uri pentru feedback.',
+                      difficulty: 'Începător',
+                      duration: '2 ședințe',
+                      concepts: [
+                          'Componentele de bază SPIKE Essential',
+                          'Motoare și mișcare de bază',
+                          'Senzorul de distanță',
+                          'LED-uri și feedback vizual',
+                          'Programare prin blocuri',
+                          'Bucle simple',
+                          'Evenimente și așteptare'
+                      ],
                       detailedSteps: [
-                        {
-                          phase: 'Construcție',
-                          steps: [
-                            'Asamblare șasiu robust cu 2 motoare mari',
-                            'Montare senzori (ultrasonic, giroscop, culoare)',
-                            'Optimizare poziționare pentru centru de greutate',
-                            'Testare stabilitate și manevrabilitate'
-                          ]
-                        },
-                        {
-                          phase: 'Programare',
-                          steps: [
-                            'Implementare control precis mișcare folosind giroscop',
-                            'Dezvoltare algoritm PID pentru urmărire linie',
-                            'Programare evitare obstacole cu predicție',
-                            'Creare sistem de navigare multi-mod'
-                          ]
-                        }
+                          {
+                              phase: 'Construcție',
+                              steps: [
+                                  'Explorarea componentelor SPIKE Essential',
+                                  'Construirea structurii de bază a robotului',
+                                  'Montarea motorului și hub-ului',
+                                  'Poziționarea senzorului de distanță',
+                                  'Testarea stabilității'
+                              ]
+                          },
+                          {
+                              phase: 'Programare',
+                              steps: [
+                                  'Familiarizarea cu interfața de programare',
+                                  'Controlul LED-urilor pentru expresii',
+                                  'Programarea răspunsurilor la senzorul de distanță',
+                                  'Adăugarea mișcărilor simple',
+                                  'Testare și depanare'
+                              ]
+                          }
                       ],
                       learningOutcomes: [
-                        'Înțelegerea controlului PID',
-                        'Fuziunea datelor de la multipli senzori',
-                        'Implementare algoritmi complecși',
-                        'Optimizare performanță robot'
+                          'Înțelegerea componentelor de bază ale unui robot',
+                          'Programare vizuală fundamentală',
+                          'Utilizarea senzorilor pentru interacțiune',
+                          'Gândire logică și secvențială',
+                          'Rezolvarea problemelor simple'
                       ]
-                    },
-                    {
-                      name: 'Braț Robotic cu Control Precis',
-                      description: 'Braț robotic programabil cu multiple grade de libertate și control precis',
-                      difficulty: 'Intermediar-Avansat',
-                      duration: '4 ședințe',
-                      concepts: ['Cinematică', 'Control precis', 'Coordonate', 'Feedback'],
+                  },
+                  {
+                      name: 'Vehicul Inteligent',
+                      description: 'Copiii construiesc un vehicul robotizat care poate detecta și evita obstacole, demonstrând principiile de bază ale vehiculelor autonome.',
+                      difficulty: 'Începător-Intermediar',
+                      duration: '3 ședințe',
+                      concepts: [
+                          'Design mecanic de bază',
+                          'Motoare pentru propulsie',
+                          'Senzor de distanță pentru navigare',
+                          'Algoritmi simpli de evitare',
+                          'Condiții IF-THEN',
+                          'Variabile pentru memorare'
+                      ],
                       detailedSteps: [
+                          {
+                              phase: 'Construcție',
+                              steps: [
+                                  'Asamblarea șasiului mobil',
+                                  'Montarea roților și motoarelor',
+                                  'Instalarea senzorului de distanță',
+                                  'Optimizarea designului pentru mobilitate',
+                                  'Adăugarea elementelor de protecție'
+                              ]
+                          },
+                          {
+                              phase: 'Programare',
+                              steps: [
+                                  'Programarea mișcărilor de bază',
+                                  'Implementarea detecției de obstacole',
+                                  'Crearea comportamentului de evitare',
+                                  'Adăugarea indicatorilor LED',
+                                  'Testare în diferite medii'
+                              ]
+                          }
+                      ],
+                      learningOutcomes: [
+                          'Principii de design mecanic',
+                          'Logică condițională în programare',
+                          'Comportamente autonome simple',
+                          'Testare și optimizare',
+                          'Rezolvarea problemelor practice'
+                      ]
+                  }
+              ]
+          },
+
+          intermediate: {
+            title: 'Proiecte Interactive (Săptămânile 5-8)',
+            list: [
+                {
+                    name: 'Sistem de Sortare Automată',
+                    description: 'Un proiect complex care introduce concepte de automatizare, folosind senzori pentru a sorta și procesa diferite obiecte bazate pe caracteristicile lor.',
+                    difficulty: 'Intermediar',
+                    duration: '3 ședințe',
+                    concepts: [
+                        'Utilizarea senzorului de culoare',
+                        'Mecanisme de sortare',
+                        'Programare cu mai multe variabile',
+                        'Condiții multiple',
+                        'Secvențe complexe de acțiuni',
+                        'Gestionarea erorilor simple'
+                    ],
+                    detailedSteps: [
                         {
-                          phase: 'Construcție',
-                          steps: [
-                            'Asamblare structură stabilă cu 3 motoare',
-                            'Implementare sistem de angrenaje pentru precizie',
-                            'Adăugare senzor de atingere pentru calibrare',
-                            'Optimizare contrabalans și stabilitate'
-                          ]
+                            phase: 'Construcție',
+                            steps: [
+                                'Construirea sistemului de alimentare',
+                                'Crearea mecanismului de sortare',
+                                'Instalarea senzorilor',
+                                'Asamblarea containerelor de sortare',
+                                'Testarea mecanică a sistemului'
+                            ]
                         },
                         {
-                          phase: 'Programare',
-                          steps: [
-                            'Calibrare automată la pornire',
-                            'Programare mișcări de bază coordonate',
-                            'Implementare control prin coordonate',
-                            'Dezvoltare secvențe de manipulare'
-                          ]
+                            phase: 'Programare',
+                            steps: [
+                                'Configurarea detecției de culoare',
+                                'Programarea secvenței de sortare',
+                                'Implementarea sistemului de numărare',
+                                'Adăugarea feedback-ului LED',
+                                'Optimizarea preciziei'
+                            ]
                         }
-                      ]
-                    }
-                  ]
+                    ],
+                    learningOutcomes: [
+                        'Înțelegerea sistemelor automate',
+                        'Logică complexă de programare',
+                        'Managementul proceselor',
+                        'Calibrare și precizie',
+                        'Rezolvarea problemelor tehnice'
+                    ]
                 },
-                intermediate: {
-                  title: 'Proiecte Intermediare (Săptămânile 7-10)',
-                  list: [
-                    {
-                      name: 'Sistem de Sortare Automat',
-                      description: 'Robot care poate sorta obiecte după culoare, dimensiune sau greutate',
-                      difficulty: 'Avansat',
-                      duration: '4-5 ședințe',
-                      concepts: ['Automatizare', 'Procesare paralelă', 'Clasificare', 'Optimizare'],
-                      detailedSteps: [
+                {
+                    name: 'Robot Interactiv cu Comenzi Multiple',
+                    description: 'Un robot versatil care poate răspunde la diferite comenzi și poate executa mai multe sarcini, introducând concepte de programare mai avansate.',
+                    difficulty: 'Intermediar',
+                    duration: '3 ședințe',
+                    concepts: [
+                        'Interacțiune multi-senzor',
+                        'Comenzi și răspunsuri',
+                        'Funcții simple',
+                        'Stări multiple',
+                        'Evenimente și triggere',
+                        'Feedback complex'
+                    ],
+                    detailedSteps: [
                         {
-                          phase: 'Construcție',
-                          steps: [
-                            'Construire sistem de alimentare',
-                            'Implementare mecanism de scanare',
-                            'Creare sistem de sortare cu multiple căi',
-                            'Optimizare flux materiale'
-                          ]
+                            phase: 'Design și Construcție',
+                            steps: [
+                                'Proiectarea structurii robotului',
+                                'Integrarea multiplilor senzori',
+                                'Construirea sistemelor de răspuns',
+                                'Adăugarea elementelor interactive',
+                                'Testarea mecanismelor'
+                            ]
                         },
                         {
-                          phase: 'Programare',
-                          steps: [
-                            'Dezvoltare algoritm de clasificare',
-                            'Implementare logică de sortare',
-                            'Optimizare timpi și precizie',
-                            'Adăugare sistem de logging'
-                          ]
+                            phase: 'Programare',
+                            steps: [
+                                'Definirea comenzilor de bază',
+                                'Programarea răspunsurilor',
+                                'Implementarea stărilor multiple',
+                                'Crearea sistemului de feedback',
+                                'Testare și rafinare'
+                            ]
                         }
-                      ]
-                    },
-                    {
-                      name: 'Robot pentru Competiții',
-                      description: 'Robot versatil pentru diferite provocări de tip competiție',
-                      difficulty: 'Avansat',
-                      duration: '5-6 ședințe',
-                      concepts: ['Design modular', 'Strategii', 'Optimizare', 'Fiabilitate'],
-                      detailedSteps: [
-                        {
-                          phase: 'Design și Construcție',
+                    ]
+                }
+            ]
+        },
+
+        advanced: {
+          title: 'Proiecte Complexe (Săptămânile 9-12)',
+          list: [
+              {
+                  name: 'Mini-Fabrică Inteligentă',
+                  description: 'Un proiect complex care combină toate conceptele învățate pentru a crea o linie de producție automatizată în miniatură.',
+                  difficulty: 'Avansat',
+                  duration: '4 ședințe',
+                  concepts: [
+                      'Integrare multiplă sisteme',
+                      'Automatizare completă',
+                      'Coordonare senzori',
+                      'Gestionare erori',
+                      'Optimizare proces',
+                      'Monitorizare stare'
+                  ],
+                  detailedSteps: [
+                      {
+                          phase: 'Design și Planificare',
                           steps: [
-                            'Analiză cerințe competiție',
-                            'Design modular adaptabil',
-                            'Implementare sisteme redundante',
-                            'Testare și optimizare'
+                              'Schițarea planului sistemului',
+                              'Identificarea punctelor critice',
+                              'Planificarea fluxului de lucru',
+                              'Design modular',
+                              'Strategii de control'
                           ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                advanced: {
-                  title: 'Proiecte Avansate (Săptămânile 11-14)',
-                  list: [
-                    {
-                      name: 'Sistem Multi-Robot Coordonat',
-                      description: 'Sistem de roboți care lucrează împreună pentru îndeplinirea unor sarcini complexe',
-                      difficulty: 'Expert',
-                      duration: '6 ședințe',
-                      concepts: ['Comunicare', 'Coordonare', 'Algoritmi distribuiți', 'Sincronizare'],
-                      detailedSteps: [
-                        {
+                      },
+                      {
                           phase: 'Implementare',
                           steps: [
-                            'Dezvoltare protocol comunicare',
-                            'Implementare algoritmi coordonare',
-                            'Creare sistem central de control',
-                            'Optimizare performanță sistem'
+                              'Construcția sistemelor componente',
+                              'Integrarea senzorilor',
+                              'Asamblarea liniei de producție',
+                              'Implementarea sistemului de control',
+                              'Testare și calibrare'
                           ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              },
-
-              curriculum: {
-                structure: {
-                  duration: '14-16 săptămâni',
-                  sessionsPerWeek: '2 sesiuni',
-                  sessionLength: '2 ore',
-                  groupSize: '8-12 copii',
-                  teacherStudent: '1:6 ratio recomandat'
-                },
-                progression: {
-                  initial: {
-                    title: 'Faza Inițială (4 săptămâni)',
-                    content: [
-                      'Introducere în robotică avansată',
-                      'Construcție și mecanică complexă',
-                      'Programare structurată',
-                      'Lucrul cu senzori multipli',
-                      'Concepte de control precis',
-                      'Fundamentele competițiilor robotice'
-                    ]
-                  },
-                  development: {
-                    title: 'Faza de Dezvoltare (6 săptămâni)',
-                    content: [
-                      'Algoritmi avansați de control',
-                      'Implementare PID și giroscop',
-                      'Proiecte autonome complexe', 
+                      },
+                      {
+                          phase: 'Programare Avansată',
+                          steps: [
+                              'Dezvoltarea logicii de control',
+                              'Implementarea sistemului de monitorizare',
+                              'Programarea răspunsurilor la erori',
+                              'Optimizarea proceselor',
+                              'Testare și validare'
+                          ]
+                      }
+                  ],
+                  learningOutcomes: [
+                      'Gândire sistemică avansată',
+                      'Management de proiect',
+                      'Rezolvare probleme complexe',
                       'Optimizare și eficiență',
-                      'Pregătire pentru competiții',
                       'Documentare tehnică'
-                    ]
-                  },
-                  advanced: {
-                    title: 'Faza Avansată (4-6 săptămâni)',
-                    content: [
-                      'Sisteme multi-robot',
-                      'Algoritmi customizați',
-                      'Proiecte de echipă complexe',
-                      'Participare la competiții',
-                      'Dezvoltare strategii avansate',
-                      'Prezentări tehnice'
-                    ]
-                  }
-                }
-              },
-           
-              evaluation: {
-                methods: [
-                  'Evaluare continuă prin proiecte practice',
-                  'Participare la competiții interne și externe',
-                  'Documentație tehnică a proiectelor',
-                  'Prezentări și demonstrații',
-                  'Portfolio digital extins',
-                  'Evaluare inter-perechi'
-                ],
-                criteria: [
-                  'Capacitatea de rezolvare probleme complexe',
-                  'Implementarea algoritmilor avansați',
-                  'Optimizarea și eficiența soluțiilor',
-                  'Documentare și prezentare tehnică',
-                  'Lucru în echipă și management proiect',
-                  'Performanța în competiții',
-                  'Inovație și creativitate în design'
-                ]
+                  ]
               }
-            } // închidere modul nivel 2
- 
-        ];
-  
+          ]
+      }
+  },
+
+  curriculum: {
+      structure: {
+          duration: '12 săptămâni',
+          sessionsPerWeek: '1-2 sesiuni',
+          sessionLength: '1.5 ore',
+          maxGroupSize: 'maxim 15 copii' ,
+          groupDetails: 'Lucru în echipe de 2-3 copii per kit',
+          requirements: [
+              'Vârsta recomandată: 7-11 ani. ',
+              'Nu necesită experiență anterioară. ',
+              'Necesita interes pentru tehnologie și construcții.'
+          ]
+      },
+      progression: {
+          initial: {
+              title: 'Fundamente (Săptămânile 1-4)',
+              content: [
+                  'Introducere în robotică și componente',
+                  'Primele construcții și programări',
+                  'Utilizarea motoarelor și senzorilor',
+                  'Concepte de bază în programare',
+                  'Proiecte simple interactive'
+              ]
+          },
+          development: {
+              title: 'Dezvoltare și Aplicații (Săptămânile 5-8)',
+              content: [
+                  'Proiecte cu multiple componente',
+                  'Programare intermediară',
+                  'Automatizare simplă',
+                  'Rezolvarea problemelor practice',
+                  'Lucrul cu mai mulți senzori'
+              ]
+          },
+          advanced: {
+              title: 'Proiecte Avansate (Săptămânile 9-12)',
+              content: [
+                  'Sisteme robotice complexe',
+                  'Automatizare avansată',
+                  'Integrare multiplă sisteme',
+                  'Optimizare și eficiență',
+                  'Proiecte finale demonstrative'
+              ]
+          }
+      }
+  }
+},
+
+
+
+
+{
+  id: 'mbot',
+  level: 'Nivel 2 - Intermediar',
+  title: 'mBot Explorer',
+  subtitle: 'Robotică și Programare (9-13 ani)',
+  description: 'mBot oferă o introducere practică în lumea roboticii bazate pe Arduino, permițând tranziția de la programarea vizuală la cea bazată pe text. Platforma combină electronica cu programarea, oferind o experiență completă de învățare.\n\n' +
+              'În acest modul, elevii vor explora:\n' +
+              '• Bazele roboticii și electronicii\n' +
+              '• Programare vizuală și bazată pe text (Arduino)\n' +
+              '• Senzori și actuatori avansați\n' +
+              '• Algoritmi de control robotic\n' +
+              '• Proiecte practice de automatizare\n\n' +
+              'Platforma mBot oferă o tranziție perfectă între robotica de bază și proiectele electronice mai avansate, pregătind elevii pentru provocări mai complexe.',
+
+  projects: {
+      basic: {
+          title: 'Introducere în mBot (Săptămânile 1-4)',
+          list: [
+              {
+                  name: 'Control și Navigare',
+                  description: 'Primul proiect cu mBot focusat pe înțelegerea platformei și controlul de bază al robotului.',
+                  difficulty: 'Intermediar',
+                  duration: '2 ședințe',
+                  concepts: [
+                      'Arhitectura mBot și Arduino',
+                      'Controlul motoarelor DC',
+                      'Senzori de bază (IR, ultrasonic)',
+                      'Programare block-based în mBlock',
+                      'Introducere în Arduino IDE',
+                      'Bucle și condiții'
+                  ],
+                  detailedSteps: [
+                      {
+                          phase: 'Hardware și Asamblare',
+                          steps: [
+                              'Identificarea componentelor mBot',
+                              'Asamblarea structurii de bază',
+                              'Conexiuni electrice și verificare',
+                              'Testarea componentelor individuale',
+                              'Verificarea funcționalității'
+                          ]
+                      },
+                      {
+                          phase: 'Programare Inițială',
+                          steps: [
+                              'Configurarea mediului de programare',
+                              'Primul program de control motoare',
+                              'Testarea senzorilor de bază',
+                              'Implementarea controlului de mișcare',
+                              'Debugging și optimizare'
+                          ]
+                      }
+                  ],
+                  learningOutcomes: [
+                      'Înțelegerea componentelor robotice',
+                      'Bazele programării pentru robotică',
+                      'Controlul motoarelor și senzorilor',
+                      'Debugging hardware și software',
+                      'Principii de electronică'
+                  ]
+              },
+              {
+                  name: 'Robot Reactiv',
+                  description: 'Dezvoltarea unui robot care poate reacționa la mediul înconjurător folosind senzorii disponibili.',
+                  difficulty: 'Intermediar',
+                  duration: '3 ședințe',
+                  concepts: [
+                      'Senzori multipli',
+                      'Comportamente reactive',
+                      'Logică condițională avansată',
+                      'Calibrare senzori',
+                      'Introducere în C++ pentru Arduino'
+                  ],
+                  detailedSteps: [
+                      {
+                          phase: 'Setup și Configurare',
+                          steps: [
+                              'Configurarea senzorilor',
+                              'Calibrare și testare',
+                              'Implementare comportamente de bază',
+                              'Testare reacții',
+                              'Optimizare răspunsuri'
+                          ]
+                      }
+                  ]
+              }
+          ]
+      },
+
+      intermediate: {
+        title: 'Proiecte Avansate cu mBot (Săptămânile 5-8)',
+        list: [
+            {
+                name: 'Line Follower Avansat',
+                description: 'Un robot capabil să urmărească linii cu diferite complexități și să ia decizii în funcție de marcaje speciale.',
+                difficulty: 'Intermediar-Avansat',
+                duration: '3 ședințe',
+                concepts: [
+                    'Algoritmi PID pentru control',
+                    'Senzori IR pentru linie',
+                    'Optimizare viteză',
+                    'Calibrare automată',
+                    'Programare în Arduino C++',
+                    'Gestionare intersecții'
+                ],
+                detailedSteps: [
+                    {
+                        phase: 'Dezvoltare Hardware',
+                        steps: [
+                            'Optimizarea poziției senzorilor IR',
+                            'Ajustarea centrului de greutate',
+                            'Modificări pentru stabilitate',
+                            'Testare pe diferite suprafețe',
+                            'Implementare sistem de calibrare'
+                        ]
+                    },
+                    {
+                        phase: 'Implementare Software',
+                        steps: [
+                            'Dezvoltarea algoritmului PID',
+                            'Programarea detecției de intersecții',
+                            'Implementarea deciziilor la marcaje',
+                            'Optimizarea pentru viteză',
+                            'Testare și ajustare parametri'
+                        ]
+                    }
+                ],
+                learningOutcomes: [
+                    'Algoritmi de control avansat',
+                    'Optimizare și calibrare',
+                    'Programare C++ pentru Arduino',
+                    'Debugging sistematic',
+                    'Documentare tehnică'
+                ]
+            },
+            {
+                name: 'Sistem de Evitare Obstacole cu Mapping',
+                description: 'Robot autonom care poate naviga într-un spațiu necunoscut, evitând obstacole și creând o hartă simplă a mediului.',
+                difficulty: 'Avansat',
+                duration: '4 ședințe',
+                concepts: [
+                    'Algoritmi de navigare',
+                    'Senzor ultrasonic',
+                    'Mapping simplu',
+                    'Odometrie de bază',
+                    'Luare de decizii autonomă'
+                ],
+                detailedSteps: [
+                    {
+                        phase: 'Dezvoltare',
+                        steps: [
+                            'Implementare sistem de navigație',
+                            'Dezvoltare algoritm mapping',
+                            'Integrare senzori pentru poziționare',
+                            'Creare sistem decizie',
+                            'Optimizare comportament'
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    advanced: {
+        title: 'Proiecte Complexe (Săptămânile 9-12)',
+        list: [
+            {
+                name: 'Smart Robot System',
+                description: 'Un robot versatil care combină multiple funcționalități și poate fi controlat prin Bluetooth, demonstrând integrarea completă a conceptelor învățate.',
+                difficulty: 'Foarte Avansat',
+                duration: '4 ședințe',
+                concepts: [
+                    'Comunicație Bluetooth',
+                    'Control prin aplicație mobilă',
+                    'Integrare senzori multipli',
+                    'Comportamente complexe',
+                    'Procesare date în timp real'
+                ],
+                detailedSteps: [
+                    {
+                        phase: 'Implementare',
+                        steps: [
+                            'Dezvoltare protocoale comunicație',
+                            'Creare interfață control',
+                            'Implementare funcții complexe',
+                            'Integrare sisteme',
+                            'Testare și optimizare'
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+},
+
+curriculum: {
+    structure: {
+        duration: '12 săptămâni',
+        sessionsPerWeek: '1-2 sesiuni',
+        sessionLength: '1.5 - 2 ore',
+        maxGroupSize: 'maxim 15 copii',
+        groupDetails: 'Lucru individual sau în perechi',
+        requirements: [
+            'Vârsta recomandată: 9-13 ani',
+            'Experiență de bază în programare vizuală',
+            'Interes pentru electronică și programare'
+        ]
+    },
+    progression: {
+        initial: {
+            title: 'Bazele mBot și Arduino',
+            content: [
+                'Introducere în platforma mBot',
+                'Tranziție de la block la text programming',
+                'Concepte de bază Arduino',
+                'Control motoare și senzori',
+                'Primele programe autonome'
+            ]
+        },
+        development: {
+            title: 'Dezvoltare Avansată',
+            content: [
+                'Programare C++ pentru Arduino',
+                'Algoritmi de control complex',
+                'Proiecte multi-senzor',
+                'Comportamente autonome',
+                'Optimizare și eficiență'
+            ]
+        },
+        advanced: {
+            title: 'Proiecte și Integrare',
+            content: [
+                'Sisteme robotice complexe',
+                'Comunicație și control la distanță',
+                'Proiecte personalizate',
+                'Integrare concepte avansate',
+                'Prezentări finale'
+            ]
+        }
+    }
+}
+},
+
+
+{
+  id: 'spike-prime',
+  level: 'Nivel 2 - Intermediar Avansat',
+  title: 'LEGO SPIKE Prime',
+  subtitle: 'Robotică și Programare Avansată (10-14 ani)',
+  description: 'LEGO SPIKE Prime reprezintă o platformă avansată de robotică educațională, oferind posibilități extinse pentru proiecte complexe și introducere în programare Python.\n\n' +
+              'În acest modul, elevii vor dezvolta:\n' +
+              '• Abilități avansate de construcție și design mecanic\n' +
+              '• Programare în Python pentru robotică\n' +
+              '• Utilizarea senzorilor avansați (giroscop, forță, etc.)\n' +
+              '• Implementarea algoritmilor de control complex\n' +
+              '• Dezvoltarea proiectelor pentru competiții\n\n' +
+              'SPIKE Prime oferă o platformă robustă pentru tranziția către robotica avansată și programarea text-based.',
+
+  projects: {
+      basic: {
+          title: 'Fundamente SPIKE Prime (Săptămânile 1-4)',
+          list: [
+              {
+                  name: 'Robot Omnidirecțional',
+                  description: 'Construirea și programarea unui robot care se poate deplasa în toate direcțiile folosind roți omnidirecționale și control giroscopic.',
+                  difficulty: 'Intermediar',
+                  duration: '3 ședințe',
+                  concepts: [
+                      'Design mecanic avansat',
+                      'Sistemul de roți omnidirecționale',
+                      'Control cu giroscop',
+                      'Bazele Python în SPIKE Prime',
+                      'Cinematică robotică',
+                      'Control precis al mișcării'
+                  ],
+                  detailedSteps: [
+                      {
+                          phase: 'Design și Construcție',
+                          steps: [
+                              'Proiectarea șasiului pentru stabilitate',
+                              'Montarea roților omnidirecționale',
+                              'Configurarea giroscopului',
+                              'Optimizarea centrului de greutate',
+                              'Testarea sistemului mecanic'
+                          ]
+                      },
+                      {
+                          phase: 'Programare',
+                          steps: [
+                              'Introducere în Python pentru SPIKE',
+                              'Implementarea controlului de bază',
+                              'Programarea mișcărilor omnidirecționale',
+                              'Integrarea datelor giroscopice',
+                              'Calibrare și testare'
+                          ]
+                      }
+                  ],
+                  learningOutcomes: [
+                      'Înțelegerea sistemelor omnidirecționale',
+                      'Programare în Python pentru roboți',
+                      'Utilizarea senzorilor avansați',
+                      'Optimizare mecanică',
+                      'Debug și rezolvare probleme'
+                  ]
+              },
+              {
+                  name: 'Sistem de Ridicare și Manipulare',
+                  description: 'Dezvoltarea unui braț robotic cu multiple grade de libertate, capabil să manipuleze obiecte cu precizie.',
+                  difficulty: 'Intermediar-Avansat',
+                  duration: '3 ședințe',
+                  concepts: [
+                      'Mecanisme de ridicare',
+                      'Control servo precis',
+                      'Programare orientată pe obiecte',
+                      'Senzori de forță și poziție',
+                      'Cinematică directă și inversă'
+                  ],
+                  detailedSteps: [
+                      {
+                          phase: 'Construcție',
+                          steps: [
+                              'Design braț articulated',
+                              'Implementare sistem de prindere',
+                              'Instalare senzori',
+                              'Testare mecanică',
+                              'Optimizare mișcări'
+                          ]
+                      }
+                  ]
+              }
+          ]
+      },
+
+      intermediate: {
+        title: 'Proiecte Avansate (Săptămânile 5-8)',
+        list: [
+            {
+                name: 'Robot pentru Competiții',
+                description: 'Dezvoltarea unui robot versatil pentru provocări tip competiție, capabil să îndeplinească multiple sarcini autonome.',
+                difficulty: 'Avansat',
+                duration: '4 ședințe',
+                concepts: [
+                    'Strategii de competiție',
+                    'Programare modulară în Python',
+                    'Senzori multipli',
+                    'Control autonom avansat',
+                    'Optimizare performanță',
+                    'Gestionarea stărilor multiple'
+                ],
+                detailedSteps: [
+                    {
+                        phase: 'Design și Strategie',
+                        steps: [
+                            'Analiza cerințelor competiției',
+                            'Proiectarea sistemelor modulare',
+                            'Design pentru fiabilitate',
+                            'Implementare sisteme redundante',
+                            'Testare în condiții de competiție'
+                        ]
+                    },
+                    {
+                        phase: 'Programare Avansată',
+                        steps: [
+                            'Dezvoltare librării personalizate',
+                            'Implementare strategii autonome',
+                            'Sisteme de calibrare automată',
+                            'Optimizare timpi execuție',
+                            'Testare și depanare'
+                        ]
+                    }
+                ],
+                learningOutcomes: [
+                    'Gândire strategică în robotică',
+                    'Programare avansată Python',
+                    'Optimizare și eficiență',
+                    'Management proiect complex',
+                    'Lucru sub presiune'
+                ]
+            },
+            {
+                name: 'Sistem Multi-Robot',
+                description: 'Crearea unui sistem de roboți care colaborează pentru îndeplinirea unei sarcini comune.',
+                difficulty: 'Foarte Avansat',
+                duration: '4 ședințe',
+                concepts: [
+                    'Comunicare între roboți',
+                    'Coordonare multi-agent',
+                    'Sincronizare acțiuni',
+                    'Gestiunea resurselor',
+                    'Algoritmi distribuiți'
+                ],
+                detailedSteps: [
+                    {
+                        phase: 'Implementare',
+                        steps: [
+                            'Dezvoltare protocol comunicație',
+                            'Implementare comportamente coordonate',
+                            'Sistem de evitare coliziuni',
+                            'Optimizare cooperare',
+                            'Testare scenarii multiple'
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    advanced: {
+        title: 'Proiecte Expert (Săptămânile 9-12)',
+        list: [
+            {
+                name: 'Fabrică Inteligentă în Miniatură',
+                description: 'Dezvoltarea unui sistem complet automatizat care simulează o linie de producție industrială.',
+                difficulty: 'Expert',
+                duration: '5 ședințe',
+                concepts: [
+                    'Automatizare industrială',
+                    'Integrare sisteme complexe',
+                    'Machine Learning elementar',
+                    'Control calitate',
+                    'Monitorizare proces'
+                ],
+                detailedSteps: [
+                    {
+                        phase: 'Dezvoltare',
+                        steps: [
+                            'Proiectare linie producție',
+                            'Implementare control automat',
+                            'Sistem detectare erori',
+                            'Optimizare flux producție',
+                            'Integrare monitorizare'
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+},
+
+curriculum: {
+    structure: {
+        duration: '12 săptămâni',
+        sessionsPerWeek: '1-2 sesiuni',
+        sessionLength: '1.5 - 2 ore',
+        maxGroupSize: 'maxim 15 copii',
+        groupDetails: 'Lucru în echipe de 2-3 per kit',
+        requirements: [
+            'Vârsta recomandată: 10-14 ani',
+            'Experiență anterioară cu robotică de bază',
+            'Cunoștințe elementare de programare'
+        ]
+    },
+    progression: {
+        initial: {
+            title: 'Fundamente Avansate',
+            content: [
+                'Introducere în Python pentru SPIKE Prime',
+                'Design mecanic și construcție avansată',
+                'Utilizare senzori complecși',
+                'Algoritmi de control de bază',
+                'Proiecte individuale'
+            ]
+        },
+        development: {
+            title: 'Dezvoltare și Competiție',
+            content: [
+                'Programare avansată în Python',
+                'Strategii pentru competiții',
+                'Optimizare și eficiență',
+                'Proiecte de echipă',
+                'Pregătire pentru provocări'
+            ]
+        },
+        advanced: {
+            title: 'Sisteme Complexe',
+            content: [
+                'Integrare sisteme multiple',
+                'Automatizare avansată',
+                'Proiecte complexe de echipă',
+                'Documentație tehnică',
+                'Prezentări finale'
+            ]
+        }
+    }
+}
+},
+
+
+
+{
+  id: 'microbit',
+  level: 'Nivel 3 - Avansat',
+  title: 'BBC micro:bit',
+  subtitle: 'Electronică și IoT (11-15 ani)',
+  description: 'BBC micro:bit reprezintă puntea ideală între robotică și electronică digitală, introducând concepte IoT și programare embedded.\n\n' +
+              'Acest modul acoperă:\n' +
+              '• Programare Python pentru sisteme embedded\n' +
+              '• Concepte de electronică digitală\n' +
+              '• Internet of Things (IoT)\n' +
+              '• Comunicații wireless și rețele de senzori\n' +
+              '• Proiecte practice de automatizare\n\n' +
+              'Platforma micro:bit permite dezvoltarea de proiecte diverse, de la sisteme simple de monitorizare până la rețele complexe de dispozitive IoT.',
+
+  projects: {
+      basic: {
+          title: 'Introducere în micro:bit (Săptămânile 1-4)',
+          list: [
+              {
+                  name: 'Device Interactiv',
+                  description: 'Crearea unui dispozitiv interactiv utilizând afișajul LED, senzorii și comunicația radio a micro:bit-ului.',
+                  difficulty: 'Intermediar',
+                  duration: '2 ședințe',
+                  concepts: [
+                      'Programare Python pentru micro:bit',
+                      'Utilizare display LED matriceal',
+                      'Senzori integrati (accelerometru, busolă)',
+                      'Comunicație radio între dispozitive',
+                      'Gestionare evenimente',
+                      'Interfețe interactive'
+                  ],
+                  detailedSteps: [
+                      {
+                          phase: 'Setup și Programare',
+                          steps: [
+                              'Configurare mediu dezvoltare Mu Editor',
+                              'Testare componente micro:bit',
+                              'Programare display LED',
+                              'Implementare interacțiuni',
+                              'Testare funcționalități'
+                          ]
+                      },
+                      {
+                          phase: 'Dezvoltare Funcționalități',
+                          steps: [
+                              'Creare animații LED personalizate',
+                              'Implementare detecție mișcare',
+                              'Adăugare funcții interactive',
+                              'Configurare comunicație radio',
+                              'Optimizare consum energie'
+                          ]
+                      }
+                  ],
+                  learningOutcomes: [
+                      'Bazele programării Python pentru embedded',
+                      'Interfațare cu hardware',
+                      'Gestionare resurse limitate',
+                      'Debugging hardware/software',
+                      'Design interfețe utilizator simple'
+                  ]
+              },
+              {
+                  name: 'Stație Meteo Wireless',
+                  description: 'Dezvoltarea unei rețele de senzori pentru monitorizarea condițiilor de mediu, cu transmitere wireless a datelor.',
+                  difficulty: 'Intermediar-Avansat',
+                  duration: '3 ședințe',
+                  concepts: [
+                      'Rețele de senzori',
+                      'Comunicație radio P2P',
+                      'Procesare și agregare date',
+                      'Salvare și vizualizare date',
+                      'Managementul energiei'
+                  ],
+                  detailedSteps: [
+                      {
+                          phase: 'Implementare',
+                          steps: [
+                              'Setup senzori mediu',
+                              'Configurare rețea radio',
+                              'Programare colectare date',
+                              'Implementare vizualizare',
+                              'Testare sistem complet'
+                          ]
+                      }
+                  ]
+              }
+          ]
+      },
+
+      intermediate: {
+        title: 'Proiecte IoT și Rețele (Săptămânile 5-8)',
+        list: [
+            {
+                name: 'Smart Home Control',
+                description: 'Dezvoltarea unui sistem de automatizare pentru casă inteligentă folosind multiple dispozitive micro:bit.',
+                difficulty: 'Avansat',
+                duration: '4 ședințe',
+                concepts: [
+                    'Rețele mesh de senzori',
+                    'Protocoale comunicație wireless',
+                    'Automatizări complexe',
+                    'Interfețe utilizator avansate',
+                    'Gestionare evenimente multiple',
+                    'Securitate de bază'
+                ],
+                detailedSteps: [
+                    {
+                        phase: 'Design Sistem',
+                        steps: [
+                            'Planificare arhitectură rețea',
+                            'Setup noduri senzori',
+                            'Configurare hub central',
+                            'Implementare protocoale comunicație',
+                            'Dezvoltare sistem control'
+                        ]
+                    },
+                    {
+                        phase: 'Programare',
+                        steps: [
+                            'Dezvoltare software noduri',
+                            'Programare hub central',
+                            'Implementare automatizări',
+                            'Creare interfață control',
+                            'Testare și optimizare'
+                        ]
+                    }
+                ],
+                learningOutcomes: [
+                    'Arhitectură sisteme distribuite',
+                    'Programare rețele de senzori',
+                    'Managementul datelor',
+                    'Protocoale IoT',
+                    'Securitate de bază'
+                ]
+            },
+            {
+                name: 'Data Logger Avansat',
+                description: 'Sistem de colectare și analiză date cu multiple puncte de măsurare și vizualizare în timp real.',
+                difficulty: 'Avansat',
+                duration: '3 ședințe',
+                concepts: [
+                    'Colectare date distribuită',
+                    'Stocare și procesare date',
+                    'Vizualizare în timp real',
+                    'Analiză statistică',
+                    'Export și raportare'
+                ],
+                detailedSteps: [
+                    {
+                        phase: 'Dezvoltare',
+                        steps: [
+                            'Implementare sistem colectare',
+                            'Dezvoltare bază de date locală',
+                            'Creare dashboard vizualizare',
+                            'Implementare analiză',
+                            'Sistem de alertare'
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    advanced: {
+        title: 'Proiecte Complexe IoT (Săptămânile 9-12)',
+        list: [
+            {
+                name: 'IoT Gateway și Cloud Integration',
+                description: 'Dezvoltarea unui gateway IoT care conectează rețeaua de micro:bit-uri la servicii cloud pentru procesare și analiză avansată.',
+                difficulty: 'Expert',
+                duration: '4 ședințe',
+                concepts: [
+                    'Integrare cloud',
+                    'APIs și web services',
+                    'Securitate IoT',
+                    'Procesare date avansată',
+                    'Vizualizare și analiză cloud',
+                    'Managementul dispozitivelor'
+                ],
+                detailedSteps: [
+                    {
+                        phase: 'Arhitectură și Implementare',
+                        steps: [
+                            'Design arhitectură sistem',
+                            'Implementare gateway',
+                            'Integrare servicii cloud',
+                            'Dezvoltare API-uri',
+                            'Implementare securitate',
+                            'Testare și monitorizare'
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+},
+
+curriculum: {
+    structure: {
+        duration: '12 săptămâni',
+        sessionsPerWeek: '1-2 sesiuni',
+        sessionLength: '1,5 - 2 ore',
+        maxGroupSize: 'maxim 15 copii',
+        groupDetails: 'Lucru individual și în echipe mici',
+        requirements: [
+            'Vârsta recomandată: 11-15 ani',
+            'Cunoștințe de bază Python',
+            'Înțelegere concepte electronice simple'
+        ]
+    },
+    progression: {
+        initial: {
+            title: 'Fundamente micro:bit și IoT',
+            content: [
+                'Introducere în micro:bit și Python',
+                'Bazele electronicii digitale',
+                'Senzori și actuatori',
+                'Comunicație wireless de bază',
+                'Primele proiecte IoT'
+            ]
+        },
+        development: {
+            title: 'Dezvoltare IoT Avansată',
+            content: [
+                'Rețele de senzori complexe',
+                'Protocoale comunicație',
+                'Automatizări IoT',
+                'Procesare date distribuită',
+                'Securitate în IoT'
+            ]
+        },
+        advanced: {
+            title: 'Sisteme IoT Complexe',
+            content: [
+                'Integrare cloud și APIs',
+                'Managementul rețelelor IoT',
+                'Analiza și vizualizarea datelor',
+                'Proiecte practice complexe',
+                'Documentație tehnică'
+            ]
+        }
+    }
+}
+},
+
+
+
+{
+  id: 'arduino',
+  level: 'Nivel 3 - Avansat',
+  title: 'Arduino',
+  subtitle: 'Robotică și Electronică Avansată (12-16 ani)',
+  description: 'Arduino reprezintă platforma perfectă pentru învățarea aprofundată a electronicii și programării embedded, oferind posibilități nelimitate de dezvoltare.\n\n' +
+              'În acest modul avansat, elevii vor explora:\n' +
+              '• Programare C++ pentru sisteme embedded\n' +
+              '• Electronică digitală și analogică avansată\n' +
+              '• Design și implementare circuite\n' +
+              '• Integrare senzori și actuatori complecși\n' +
+              '• Dezvoltare proiecte hardware complexe\n\n' +
+              'Platforma Arduino permite dezvoltarea de la zero a proiectelor, oferind control complet asupra hardware-ului și software-ului.',
+
+  projects: {
+      basic: {
+          title: 'Fundamente Arduino (Săptămânile 1-4)',
+          list: [
+              {
+                  name: 'Sistem de Monitorizare Mediu',
+                  description: 'Dezvoltarea unui sistem complex de monitorizare a mediului cu multiple tipuri de senzori și display LCD.',
+                  difficulty: 'Intermediar-Avansat',
+                  duration: '3 ședințe',
+                  concepts: [
+                      'Bazele Arduino și C++',
+                      'Interfațare senzori analogici/digitali',
+                      'Comunicație I2C/SPI',
+                      'Display LCD',
+                      'Procesare date senzori',
+                      'Calibrare și precizie'
+                  ],
+                  detailedSteps: [
+                      {
+                          phase: 'Hardware',
+                          steps: [
+                              'Design circuit pe breadboard',
+                              'Conectare senzori multipli',
+                              'Integrare display LCD',
+                              'Testare conexiuni',
+                              'Validare circuit'
+                          ]
+                      },
+                      {
+                          phase: 'Software',
+                          steps: [
+                              'Setup librării necesare',
+                              'Implementare citire senzori',
+                              'Procesare și filtrare date',
+                              'Afișare informații LCD',
+                              'Optimizare cod'
+                          ]
+                      }
+                  ],
+                  learningOutcomes: [
+                      'Electronică practică',
+                      'Programare C++ pentru Arduino',
+                      'Debugging hardware/software',
+                      'Procesare date senzori',
+                      'Design interfețe utilizator'
+                  ]
+              }
+          ]
+      },
+
+      intermediate: {
+        title: 'Proiecte Robotică Avansată (Săptămânile 5-8)',
+        list: [
+            {
+                name: 'Robot cu Sistem de Vedere',
+                description: 'Dezvoltarea unui robot autonom care poate detecta, urmări și interacționa cu obiecte folosind procesare de imagine.',
+                difficulty: 'Avansat',
+                duration: '4 ședințe',
+                concepts: [
+                    'Procesare imagini',
+                    'Control servomotoare',
+                    'Algoritmi de tracking',
+                    'PID control',
+                    'Sistem de navigație',
+                    'Integrare cameră'
+                ],
+                detailedSteps: [
+                    {
+                        phase: 'Hardware Setup',
+                        steps: [
+                            'Asamblare șasiu robot',
+                            'Integrare cameră și servomotoare',
+                            'Setup sistem motoare',
+                            'Conectare senzori auxiliari',
+                            'Testare componente'
+                        ]
+                    },
+                    {
+                        phase: 'Software',
+                        steps: [
+                            'Implementare procesare imagine',
+                            'Dezvoltare algoritmi urmărire',
+                            'Programare control mișcare',
+                            'Integrare sistem complet',
+                            'Optimizare performanță'
+                        ]
+                    }
+                ],
+                learningOutcomes: [
+                    'Computer Vision de bază',
+                    'Control motoare avansat',
+                    'Algoritmi de navigație',
+                    'Integrare sisteme complexe',
+                    'Optimizare resurse'
+                ]
+            },
+            {
+                name: 'Braț Robotic cu Feedback',
+                description: 'Construcția unui braț robotic precis cu multiple grade de libertate și feedback de poziție și forță.',
+                difficulty: 'Avansat',
+                duration: '4 ședințe',
+                concepts: [
+                    'Cinematică și dinamică',
+                    'Control precis servomotoare',
+                    'Senzori de forță',
+                    'Encodere poziție',
+                    'Interfață control',
+                    'Path planning'
+                ],
+                detailedSteps: [
+                    {
+                        phase: 'Dezvoltare',
+                        steps: [
+                            'Design mecanic braț',
+                            'Integrare servomotoare',
+                            'Implementare senzori',
+                            'Calibrare sistem',
+                            'Testare precizie'
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    advanced: {
+        title: 'Proiecte Expert (Săptămânile 9-12)',
+        list: [
+            {
+                name: 'Quadcopter DIY',
+                description: 'Construcția și programarea unui drone cu stabilizare automată și telemetrie.',
+                difficulty: 'Expert',
+                duration: '5 ședințe',
+                concepts: [
+                    'Control în timp real',
+                    'Stabilizare PID',
+                    'IMU și senzori de zbor',
+                    'Comunicație radio',
+                    'Telemetrie',
+                    'Siguranță și failsafe'
+                ],
+                detailedSteps: [
+                    {
+                        phase: 'Hardware',
+                        steps: [
+                            'Asamblare frame',
+                            'Setup sistem propulsie',
+                            'Integrare controller zbor',
+                            'Configurare radio control',
+                            'Testare sisteme'
+                        ]
+                    },
+                    {
+                        phase: 'Software și Calibrare',
+                        steps: [
+                            'Programare controller zbor',
+                            'Calibrare senzori',
+                            'Setup PID control',
+                            'Implementare funcții siguranță',
+                            'Testare în condiții controlate'
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+},
+
+curriculum: {
+    structure: {
+        duration: '12 săptămâni',
+        sessionsPerWeek: '1-2 sesiuni',
+        sessionLength: '1.5 ore',
+        maxGroupSize: 'maxim 15 copii',
+        groupDetails: 'Lucru individual la proiecte',
+        requirements: [
+            'Vârsta recomandată: 12-16 ani',
+            'Experiență anterioară cu electronică',
+            'Cunoștințe programare C++ de bază',
+            'Înțelegerea conceptelor de electronică digitală'
+        ]
+    },
+    progression: {
+        initial: {
+            title: 'Fundamente Arduino',
+            content: [
+                'Programare C++ pentru Arduino',
+                'Electronică digitală și analogică',
+                'Interfațare senzori',
+                'Comunicație serială',
+                'Debugging hardware'
+            ]
+        },
+        development: {
+            title: 'Dezvoltare Robotică',
+            content: [
+                'Sisteme de control complex',
+                'Integrare senzori avansați',
+                'Algoritmi de control',
+                'Proiecte robotice',
+                'Optimizare sistem'
+            ]
+        },
+        advanced: {
+            title: 'Proiecte Complexe',
+            content: [
+                'Sisteme în timp real',
+                'Control multicorp',
+                'Telemetrie și monitorizare',
+                'Proiecte personalizate',
+                'Documentație tehnică'
+            ]
+        }
+    }
+}
+}
+
+]

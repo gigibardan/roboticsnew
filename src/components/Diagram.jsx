@@ -7,8 +7,10 @@ import ReactFlow, {
 import 'reactflow/dist/style.css';
 
 const Diagram = ({ onNodeClick }) => {
+  // State pentru responsive design
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
+  // Event listener pentru redimensionarea ferestrei
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
     window.addEventListener('resize', handleResize);
@@ -17,170 +19,174 @@ const Diagram = ({ onNodeClick }) => {
 
   const isMobile = windowWidth < 768;
   
+  // Poziționarea nodurilor în funcție de dimensiunea ecranului
   const getNodePositions = () => {
     if (isMobile) {
       return {
-        legoBasic: { x: 25, y: 50 },
-        mbot: { x: 200, y: 50 },
-        ev3: { x: 25, y: 200 },
-        spikePrime: { x: 200, y: 200 },
-        arduino: { x: 110, y: 350 }
+        spikeEssential: { x: 110, y: 20 },
+        spikePrime: { x: 20, y: 120 },
+        mbot: { x: 200, y: 120 },
+        microbit: { x: 20, y: 220 },
+        arduino: { x: 200, y: 220 }
       };
     }
     return {
-      legoBasic: { x: 100, y: 50 },
-      mbot: { x: 400, y: 50 },
-      ev3: { x: 100, y: 200 },
-      spikePrime: { x: 400, y: 200 },
-      arduino: { x: 250, y: 350 }
+      spikeEssential: { x: 300, y: 20 },
+      spikePrime: { x: 100, y: 120 },
+      mbot: { x: 500, y: 120 },
+      microbit: { x: 100, y: 220 },
+      arduino: { x: 500, y: 220 }
     };
   };
 
   const positions = getNodePositions();
 
+  // Definirea nodurilor (boxurilor) din diagramă
   const nodes = [
-    // Nivel 1 - Start (paralel)
+    // Nivel 1 - Începător
     {
-      id: 'lego-basic',
+      id: 'spike-essential',
       data: { 
         label: (
-          <div className="p-2 md:p-3 text-center">
-            <div className="font-bold text-sm md:text-lg mb-1">LEGO SPIKE Essential</div>
-            <div className="text-xs md:text-sm">Introducere în robotică</div>
+          <div className="p-1 md:p-2 text-center">
+            <div className="font-bold text-xs md:text-base">LEGO SPIKE Essential</div>
+            <div className="text-xs">Introducere în robotică</div>
           </div>
         )
       },
-      position: positions.legoBasic,
-      className: 'min-w-[150px] md:min-w-[220px] bg-green-500 text-white rounded-lg border-2 border-green-600 shadow-lg hover:bg-green-600 transition-all duration-300 hover:scale-105',
+      position: positions.spikeEssential,
+      sourcePosition: 'bottom',
+      className: 'min-w-[120px] md:min-w-[180px] bg-green-500 text-white rounded-lg border-2 border-green-600 shadow-lg hover:bg-green-600 transition-colors',
+    },
+    // Nivel 2 - Intermediar
+    {
+      id: 'spike-prime',
+      data: { 
+        label: (
+          <div className="p-1 md:p-2 text-center">
+            <div className="font-bold text-xs md:text-base">SPIKE Prime</div>
+            <div className="text-xs">Robotică avansată</div>
+          </div>
+        )
+      },
+      position: positions.spikePrime,
+      targetPosition: 'right',
+      sourcePosition: 'bottom',
+      className: 'min-w-[120px] md:min-w-[180px] bg-blue-500 text-white rounded-lg border-2 border-blue-600 shadow-lg hover:bg-blue-600 transition-colors',
     },
     {
       id: 'mbot',
       data: { 
         label: (
-          <div className="p-2 md:p-3 text-center">
-            <div className="font-bold text-sm md:text-lg mb-1">mBot</div>
-            <div className="text-xs md:text-sm">Introducere alternativă</div>
+          <div className="p-1 md:p-2 text-center">
+            <div className="font-bold text-xs md:text-base">mBot</div>
+            <div className="text-xs">Alternativă intermediară</div>
           </div>
         )
       },
       position: positions.mbot,
-      className: 'min-w-[150px] md:min-w-[220px] bg-green-500 text-white rounded-lg border-2 border-green-600 shadow-lg hover:bg-green-600 transition-all duration-300 hover:scale-105',
+      targetPosition: 'left',
+      sourcePosition: 'left',
+      className: 'min-w-[120px] md:min-w-[180px] bg-blue-500 text-white rounded-lg border-2 border-blue-600 shadow-lg hover:bg-blue-600 transition-colors',
     },
-
-    // Nivel 2 (paralel)
+    // Nivel 3 - Avansat
     {
-      id: 'ev3',
+      id: 'microbit',
       data: { 
         label: (
-          <div className="p-2 md:p-3 text-center">
-            <div className="font-bold text-sm md:text-lg mb-1">MINDSTORMS EV3</div>
-            <div className="text-xs md:text-sm">Robotică avansată</div>
+          <div className="p-1 md:p-2 text-center">
+            <div className="font-bold text-xs md:text-base">micro:bit</div>
+            <div className="text-xs">Programare & Electronică de bază   </div>
           </div>
         )
       },
-      position: positions.ev3,
-      className: 'min-w-[150px] md:min-w-[220px] bg-blue-500 text-white rounded-lg border-2 border-blue-600 shadow-lg hover:bg-blue-600 transition-all duration-300 hover:scale-105',
+      position: positions.microbit,
+      targetPosition: 'top',
+      sourcePosition: 'right',
+      className: 'min-w-[120px] md:min-w-[180px] bg-purple-500 text-white rounded-lg border-2 border-purple-600 shadow-lg hover:bg-purple-600 transition-colors',
     },
-    {
-      id: 'spike-prime',
-      data: { 
-        label: (
-          <div className="p-2 md:p-3 text-center">
-            <div className="font-bold text-sm md:text-lg mb-1">SPIKE Prime</div>
-            <div className="text-xs md:text-sm">Alternativă avansată</div>
-          </div>
-        )
-      },
-      position: positions.spikePrime,
-      className: 'min-w-[150px] md:min-w-[220px] bg-blue-500 text-white rounded-lg border-2 border-blue-600 shadow-lg hover:bg-blue-600 transition-all duration-300 hover:scale-105',
-    },
-
-    // Nivel 3 - Final
     {
       id: 'arduino',
       data: { 
         label: (
-          <div className="p-2 md:p-3 text-center">
-            <div className="font-bold text-sm md:text-lg mb-1">Arduino</div>
-            <div className="text-xs md:text-sm">Robotică & Electronică</div>
+          <div className="p-1 md:p-2 text-center">
+            <div className="font-bold text-xs md:text-base">Arduino</div>
+            <div className="text-xs">Robotică & Electronică Avansată</div>
           </div>
         )
       },
       position: positions.arduino,
-      className: 'min-w-[150px] md:min-w-[220px] bg-purple-500 text-white rounded-lg border-2 border-purple-600 shadow-lg hover:bg-purple-600 transition-all duration-300 hover:scale-105',
+      targetPosition: 'left',
+      className: 'min-w-[120px] md:min-w-[180px] bg-purple-500 text-white rounded-lg border-2 border-purple-600 shadow-lg hover:bg-purple-600 transition-colors',
     },
   ];
 
+  // Definirea conexiunilor (săgeților) între noduri
   const edges = [
-    // Conexiuni Nivel 1 -> Nivel 2
+    // Conexiuni de la SPIKE Essential către nivel intermediar
+    {
+      id: 'e1-2',
+      source: 'spike-essential',
+      target: 'spike-prime',
+      type: 'step',
+      animated: true,
+      style: { strokeWidth: 2, stroke: '#2563eb' },
+      markerEnd: { type: MarkerType.ArrowClosed, color: '#2563eb' },
+    },
     {
       id: 'e1-3',
-      source: 'lego-basic',
-      target: 'ev3',
-      type: isMobile ? 'straight' : 'smoothstep',
+      source: 'spike-essential',
+      target: 'mbot',
+      type: 'step',
       animated: true,
-      style: { strokeWidth: isMobile ? 1 : 2, stroke: '#2563eb' },
+      style: { strokeWidth: 2, stroke: '#2563eb' },
       markerEnd: { type: MarkerType.ArrowClosed, color: '#2563eb' },
     },
+
+    // Conexiune opțională mBot -> SPIKE Prime
     {
-      id: 'e1-4',
-      source: 'lego-basic',
-      target: 'spike-prime',
-      type: isMobile ? 'straight' : 'smoothstep',
-      animated: true,
-      style: { strokeWidth: isMobile ? 1 : 2, stroke: '#2563eb' },
-      markerEnd: { type: MarkerType.ArrowClosed, color: '#2563eb' },
-    },
-    {
-      id: 'e2-3',
+      id: 'e3-2',
       source: 'mbot',
-      target: 'ev3',
-      type: isMobile ? 'straight' : 'smoothstep',
+      target: 'spike-prime',
+      type: 'straight',
+      sourcePosition: 'right',
+      targetPosition: 'left',
       animated: true,
-      style: { strokeWidth: isMobile ? 1 : 2, stroke: '#2563eb' },
+      style: { strokeWidth: 2, stroke: '#2563eb', strokeDasharray: '5,5' },
       markerEnd: { type: MarkerType.ArrowClosed, color: '#2563eb' },
     },
+
+    // Conexiuni către nivel avansat
     {
       id: 'e2-4',
-      source: 'mbot',
-      target: 'spike-prime',
-      type: isMobile ? 'straight' : 'smoothstep',
+      source: 'spike-prime',
+      target: 'microbit',
+      type: 'straight',
       animated: true,
-      style: { strokeWidth: isMobile ? 1 : 2, stroke: '#2563eb' },
-      markerEnd: { type: MarkerType.ArrowClosed, color: '#2563eb' },
-    },
-    // Conexiuni Nivel 2 -> Arduino
-    {
-      id: 'e3-5',
-      source: 'ev3',
-      target: 'arduino',
-      type: isMobile ? 'straight' : 'smoothstep',
-      animated: true,
-      style: { strokeWidth: isMobile ? 1 : 2, stroke: '#9333ea' },
+      style: { strokeWidth: 2, stroke: '#9333ea' },
       markerEnd: { type: MarkerType.ArrowClosed, color: '#9333ea' },
     },
     {
       id: 'e4-5',
-      source: 'spike-prime',
+      source: 'microbit',
       target: 'arduino',
-      type: isMobile ? 'straight' : 'smoothstep',
+      type: 'straight',
       animated: true,
-      style: { strokeWidth: isMobile ? 1 : 2, stroke: '#9333ea' },
+      style: { strokeWidth: 2, stroke: '#9333ea' },
       markerEnd: { type: MarkerType.ArrowClosed, color: '#9333ea' },
-    },
+    }
   ];
 
-// În return, modificăm div-ul container:
-return (
-    <div style={{ width: '100%', height: '100%' }}>
+  return (
+    <div style={{ width: '100%', height: '350px' }}>
       <ReactFlow
         nodes={nodes}
         edges={edges}
         onNodeClick={(_, node) => onNodeClick?.(node.id)}
         fitView
-        defaultZoom={isMobile ? 0.5 : 1.2}
-        minZoom={isMobile ? 0.4 : 0.2}
-        maxZoom={isMobile ? 0.8 : 2}
+        defaultzoom={isMobile ? 0.7 : 1}
+        minZoom={isMobile ? 0.5 : 0.3}
+        maxZoom={isMobile ? 1 : 2}
         attributionPosition="bottom-left"
         panOnScroll={false}
         zoomOnScroll={false}

@@ -6,11 +6,27 @@ import ModuleSection from './components/ModuleSection';
 
 function App() {
   const [isDiagramVisible, setIsDiagramVisible] = useState(true);
-
+ 
   const toggleDiagram = () => {
     setIsDiagramVisible(!isDiagramVisible);
   };
-
+ 
+  const handleNodeClick = (nodeId) => {
+    // Construim ID-ul secțiunii bazat pe ID-ul nodului
+    const sectionId = `${nodeId}-section`;
+    
+    // Găsim elementul
+    const element = document.getElementById(sectionId);
+    
+    // Dacă elementul există, facem scroll la el
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+ 
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header cu diagramă */}
@@ -27,7 +43,7 @@ function App() {
               {isDiagramVisible ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
             </button>
           </div>
-
+ 
           <div className={`transition-all duration-300 ${isDiagramVisible ? 'h-auto' : 'h-0'} overflow-hidden`}>
             {/* Legendă */}
             <div className="flex flex-col md:flex-row md:justify-center gap-2 md:gap-8 text-sm mb-4 px-2">
@@ -44,15 +60,15 @@ function App() {
                 <span className="text-gray-600">Nivel 3 - Robotică Avansată</span>
               </div>
             </div>
-
+ 
             {/* Container pentru diagramă */}
             <div className="border rounded-lg overflow-hidden h-[450px] md:h-[350px]">
-              <Diagram />
+              <Diagram onNodeClick={handleNodeClick} />
             </div>
           </div>
         </div>
       </div>
-
+ 
       {/* Main content */}
       <main className="container mx-auto px-4 py-8">
         <div className="max-w-6xl mx-auto">
@@ -62,19 +78,18 @@ function App() {
               Despre acest curriculum
             </h2>
             <p className="text-gray-600 mb-4">
-              Acest curriculum este special creat pentru copiii între 7 și 14 ani, 
+              Acest curriculum este special creat pentru copiii între 7 și 16 ani, 
               oferind o progresie naturală în învățarea roboticii educaționale.
             </p>
-            {/* Adăugăm mai multe detalii aici */}
           </div>
-
+ 
           {/* Module sections */}
           {modules.map(module => (
             <ModuleSection key={module.id} module={module} />
           ))}
         </div>
       </main>
-
+ 
       {/* Footer */}
       <footer className="bg-white border-t border-gray-200 mt-8">
         <div className="container mx-auto px-4 py-6">
@@ -85,6 +100,6 @@ function App() {
       </footer>
     </div>
   );
-}
-
-export default App;
+ }
+ 
+ export default App;
